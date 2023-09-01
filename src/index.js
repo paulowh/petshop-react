@@ -17,6 +17,7 @@ const router = createBrowserRouter([
     path: "sobre",
     element: <Sobre />
   }
+  
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
