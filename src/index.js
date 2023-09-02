@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './paginas/home';
 import Sobre from './paginas/sobre';
+import Pagina404 from './paginas/pagina404';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "sobre",
     element: <Sobre />
+  },
+  {
+    path: "*",
+    element: <Pagina404 />
   }
   
 ])
