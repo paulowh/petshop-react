@@ -5,30 +5,37 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './paginas/home';
-import Sobre from './paginas/sobre';
-import Pagina404 from './paginas/pagina404';
+import Home from './paginas/Home';
+import Sobre from './paginas/Sobre';
+import Pagina404 from './paginas/Pagina404';
+import ContatoDetalhes from './paginas/ContatoDetalhes';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
-  },
-  {
-    path: "sobre",
-    element: <Sobre />
-  },
-  {
-    path: "*",
-    element: <Pagina404 />
+    element: <App />,
+    errorElement: <Pagina404 />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "sobre",
+        element: <Sobre />
+      },
+      {
+        path: "contato/:id",
+        element: <ContatoDetalhes />
+      }
+    ]
   }
-  
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -1,11 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import Home from './paginas/home';
 import './assets/css/base/base.css'
+import { Outlet } from 'react-router-dom';
+import Cabecalho from './components/Cabecalho';
 
 function App() {
   return (
-    <Home />
+    <>
+      <Cabecalho />
+      <Outlet />
+      <p>rodapé</p>
+    </>
   );
 }
 
