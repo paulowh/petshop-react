@@ -9,12 +9,13 @@ import Home from './paginas/Home';
 import Sobre from './paginas/Sobre';
 import Pagina404 from './paginas/Pagina404';
 import ContatoDetalhes from './paginas/ContatoDetalhes';
+import Post from './paginas/Post';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <Pagina404 />,
+    // errorElement: <Pagina404 />,
     children: [
       {
         path: "/",
@@ -27,6 +28,14 @@ const router = createBrowserRouter([
       {
         path: "contato/:id",
         element: <ContatoDetalhes />
+      },
+      {
+        path: "posts/:id",
+        element: <Post />
+      }, 
+      {
+        path: "*",
+        element: <Pagina404 />
       }
     ]
   }
