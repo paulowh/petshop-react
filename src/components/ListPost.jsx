@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { busca } from '../api/api'
 import { Link } from 'react-router-dom'
+
 const ListPost = ({ url }) => {
     const [posts, setPosts] = useState([])
     useEffect(() => {
