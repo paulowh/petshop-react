@@ -10,6 +10,8 @@ import Sobre from './paginas/Sobre';
 import Pagina404 from './paginas/Pagina404';
 import ContatoDetalhes from './paginas/ContatoDetalhes';
 import Post from './paginas/Post';
+import Categoria from './paginas/Categoria';
+import ListPost from './components/ListPost';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,10 @@ const router = createBrowserRouter([
         path: "posts/:id",
         element: <Post />
       }, 
+      {
+        path: "categoria/:id",
+        element: <Categoria />
+      },
       {
         path: "*",
         element: <Pagina404 />
