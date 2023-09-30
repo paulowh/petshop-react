@@ -1,5 +1,6 @@
 import React from "react";
 import ListPost from "../components/ListPost";
+import ListaCategorias from "../components/ListaCategorias";
 
 const Home = () => {
     return (
@@ -7,7 +8,8 @@ const Home = () => {
             <div className="container">
                 <h2 className="titulo-pagina">Sobre Meu amigo cão</h2>
             </div>
-           <ListPost url={'/posts/'} />
+            <ListaCategorias />
+            <ListPost url={'/posts/'} />
         </main>
     )
 }
