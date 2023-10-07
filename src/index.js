@@ -11,6 +11,7 @@ import Pagina404 from './paginas/Pagina404';
 import ContatoDetalhes from './paginas/ContatoDetalhes';
 import Post from './paginas/Post';
 import Categoria from './paginas/Categoria';
+import Admin from './paginas/admin/Admin';
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     element: <App />,
     // errorElement: <Pagina404 />,
     children: [
+      {
+        path: "*",
+        element: <Pagina404 />
+      },
       {
         path: "/",
         element: <Home />
@@ -34,18 +39,17 @@ const router = createBrowserRouter([
       {
         path: "posts/:id",
         element: <Post />
-      }, 
+      },
       {
         path: "categoria/:id",
         element: <Categoria />
       },
       {
-        path: "categoria/:id/:subcategoria",
+        path: "/categoria/:id/:subcategoria",
         element: <Categoria />
-      },
-      {
-        path: "*",
-        element: <Pagina404 />
+      }, {
+        path: "/admin",
+        element: <Admin />
       }
     ]
   }
