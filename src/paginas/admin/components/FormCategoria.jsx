@@ -1,31 +1,52 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, TextField } from '@mui/material'
-import axios from 'axios'
 import { api } from '../../../api/api'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const FormCategoria = () => {
     const navigate = useNavigate();
+    const parametros = useParams();
 
     const [nomeCategoria, setNomeCategoria] = useState('')
-    
+
+    useEffect(() => {
+        if (parametros.id) {
+            api.get(`categorias/${parametros.id}/`)
+                .then(resposta => setNomeCategoria(resposta.data.nome))
+        }
+    }, [parametros])
+
     const CadCategoria = (evento) => {
         evento.preventDefault()
 
         console.log('Os dados vão para a API? quais: ')
         console.log(nomeCategoria)
 
-        api.post(`/categorias`, {
-            id: nomeCategoria,
-            nome: nomeCategoria,
-            subcategorias: []
+        if (parametros.id) {
+            api.put(`categorias/${parametros.id}/`, {
+                id: nomeCategoria,
+                nome: nomeCategoria,
+                subcategorias: []
+            }).then(() => { //se a requisição der certo
+                alert('Sucesso !')
+                navigate('/admin')
 
-        }).then(() => { //se a requisição der certo
-            alert('Sucesso !')
-            navigate('/admin')
+            })
 
-        })
-        
+        } else {
+
+            api.post(`/categorias`, {
+                id: nomeCategoria,
+                nome: nomeCategoria,
+                subcategorias: []
+
+            }).then(() => { //se a requisição der certo
+                alert('Sucesso !')
+                navigate('/admin')
+                
+            })
+        }
+
         // axios.post(`http://localhost:5000/categorias`, {
         //     id: nomeCategoria,
         //     nome: nomeCategoria,
@@ -59,7 +80,7 @@ const FormCategoria = () => {
                         sx={{ marginTop: 1 }}
                         fullWidth
                     >
-                        Cadastrar
+                        {parametros.id ? 'Salvar' : 'Cadastrar'}
                     </Button>
                 </form>
             </article>

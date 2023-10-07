@@ -10,6 +10,7 @@ import SubCategorias from '../components/SubCategorias';
 
 const Categoria = () => {
     const { id, subcategoria } = useParams()
+    
     console.log(subcategoria)
 
     const [subcategorias, setSubCategorias] = useState([])
