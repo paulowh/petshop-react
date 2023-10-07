@@ -1,14 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { busca } from '../../../api/api';
+import { api, busca } from '../../../api/api';
 import '../components/tabela.css';
 import { Button } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 
 const ListaCatAdmin = () => {
+    
     const [categorias, setCategorias] = useState([]);
     useEffect(() => {
         busca(`/categorias`, setCategorias)
     }, [])
+
+    const excluir = (CategoriaDel) => {
+        api.delete(`categorias/${CategoriaDel.id}/`)
+            .then(() => {
+                const listaCategorias = categorias.filter( categoria => categoria.id !== CategoriaDel.id)
+                setCategorias([...listaCategorias])
+            })
+    } 
+
 
     return (
         <section className="container">
@@ -58,6 +69,7 @@ const ListaCatAdmin = () => {
                                             color='error'
                                             align='right'
                                             sx={{ margin: '0 0.25rem'}}
+                                            onClick={() => excluir(categoria)}
                                         >
                                             Excluir
                                         </Button>

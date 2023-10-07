@@ -15,16 +15,6 @@
         "treinamento",
         "educacao"
       ]
-    },
-    {
-      "id": "teste1",
-      "nome": "teste1",
-      "subcategorias": []
-    },
-    {
-      "id": "teste3",
-      "nome": "teste3",
-      "subcategorias": []
     }
   ],
   "posts": [
