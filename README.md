@@ -25,3 +25,7 @@ Para executar nosso servidor ultilizamos o codigo `npx json-server --watch db.js
 ### `npm i axios`
 
 Para consumir os dados da nossa API, iremos utilizar a biblioteca do axios
+
+### `npm install @mui/material @emotion/react @emotion/styled`
+
+Para a gente fazer uma exploração em algumas propriedades de personalização com outras bibliotecas, utilizamos da biblioteca [MUI](https://mui.com/material-ui/)

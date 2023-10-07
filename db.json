@@ -3,12 +3,28 @@
     {
       "id": "bem-estar",
       "nome": "bem-estar",
-      "subcategorias": ["higiene", "saude"]
+      "subcategorias": [
+        "higiene",
+        "saude"
+      ]
     },
     {
       "id": "comportamento",
       "nome": "comportamento",
-      "subcategorias": ["treinamento", "educacao"]
+      "subcategorias": [
+        "treinamento",
+        "educacao"
+      ]
+    },
+    {
+      "id": "teste1",
+      "nome": "teste1",
+      "subcategorias": []
+    },
+    {
+      "id": "teste3",
+      "nome": "teste3",
+      "subcategorias": []
     }
   ],
   "posts": [

@@ -12,6 +12,7 @@ import ContatoDetalhes from './paginas/ContatoDetalhes';
 import Post from './paginas/Post';
 import Categoria from './paginas/Categoria';
 import Admin from './paginas/admin/Admin';
+import FormCategoria from './paginas/admin/components/FormCategoria';
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       }, {
         path: "/admin",
         element: <Admin />
+      },
+      {
+        path: "/admin/NovaCategoria",
+        element: <FormCategoria />
       }
     ]
   }

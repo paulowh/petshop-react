@@ -22,7 +22,7 @@ const ListaCatAdmin = () => {
                                     type='submit'
                                     variant='contained'
                                     fullWidth
-                                    sx={{marginTop: 1}}
+                                    sx={{ marginTop: 1 }}
                                 >
                                     Nova Categoria
 
@@ -40,8 +40,29 @@ const ListaCatAdmin = () => {
                                         {categoria.nome}
                                     </Link>
                                 </td>
-                                <td></td>
-                                <td></td>
+                                <td colSpan="2" className="tabela__coluna--m tabela__alinhamento--direita">
+                                    <Link to={`/Admin`}>
+                                        <Button
+                                            type='submit'
+                                            variant='contained'
+                                            color='warning'
+                                            align="right"
+                                        >
+                                            Editar
+                                        </Button>
+                                    </Link>
+                                    <Link to={`/Admin`}>
+                                        <Button
+                                            type='submit'
+                                            variant='contained'
+                                            color='error'
+                                            align='right'
+                                            sx={{ margin: '0 0.25rem'}}
+                                        >
+                                            Excluir
+                                        </Button>
+                                    </Link>
+                                </td>
                             </tr>
                         ))
                     }
