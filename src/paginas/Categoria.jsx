@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/css/blog.css';
-import { Link, Route, Routes, useParams, useLocation } from 'react-router-dom';
+import { Link, Route, Routes, useParams } from 'react-router-dom';
 import ListaCategorias from '../components/ListaCategorias';
 import ListPost from '../components/ListPost';
 

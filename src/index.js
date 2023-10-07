@@ -11,8 +11,7 @@ import Pagina404 from './paginas/Pagina404';
 import ContatoDetalhes from './paginas/ContatoDetalhes';
 import Post from './paginas/Post';
 import Categoria from './paginas/Categoria';
-import ListPost from './components/ListPost';
-import SubCategorias from './components/SubCategorias';
+
 
 const router = createBrowserRouter([
   {
