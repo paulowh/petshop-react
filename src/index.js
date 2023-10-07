@@ -12,6 +12,7 @@ import ContatoDetalhes from './paginas/ContatoDetalhes';
 import Post from './paginas/Post';
 import Categoria from './paginas/Categoria';
 import ListPost from './components/ListPost';
+import SubCategorias from './components/SubCategorias';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       }, 
       {
         path: "categoria/:id",
+        element: <Categoria />
+      },
+      {
+        path: "categoria/:id/:subcategoria",
         element: <Categoria />
       },
       {
