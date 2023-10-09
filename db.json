@@ -15,6 +15,11 @@
         "treinamento",
         "educacao"
       ]
+    },
+    {
+      "id": "teste testando",
+      "nome": "testando",
+      "subcategorias": []
     }
   ],
   "posts": [
