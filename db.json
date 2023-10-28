@@ -19,7 +19,10 @@
     {
       "id": "teste testando",
       "nome": "testando",
-      "subcategorias": []
+      "subcategorias": [
+        "teste1",
+        "teste2"
+      ]
     }
   ],
   "posts": [

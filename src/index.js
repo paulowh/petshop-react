@@ -13,6 +13,8 @@ import Post from './paginas/Post';
 import Categoria from './paginas/Categoria';
 import Admin from './paginas/admin/Admin';
 import FormCategoria from './paginas/admin/components/FormCategoria';
+import CatAdmin from './paginas/admin/CatAdmin';
+import FormSubCategoria from './paginas/admin/components/FormSubCategoria';
 
 
 const router = createBrowserRouter([
@@ -59,6 +61,14 @@ const router = createBrowserRouter([
       {
         path: "/admin/:id",
         element: <FormCategoria />
+      },
+      {
+        path: "/Admin/categoria/:id",
+        element: <CatAdmin />
+      },
+      {
+        path: "/admin/sub/:id",
+        element: <FormSubCategoria />
       }
     ]
   }

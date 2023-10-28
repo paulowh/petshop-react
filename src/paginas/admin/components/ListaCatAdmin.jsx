@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { api, busca } from '../../../api/api';
 import '../components/tabela.css';
 import { Button } from '@mui/material';
-import { useNavigate } from "react-router-dom";
 
 const ListaCatAdmin = () => {
     
@@ -72,6 +71,20 @@ const ListaCatAdmin = () => {
                                             onClick={() => excluir(categoria)}
                                         >
                                             Excluir
+                                        </Button>
+                                    </Link>
+                                </td>
+                                <td>
+                                <Link to={`/Admin/categoria/${categoria.id}`}>
+                                        <Button
+                                            type='submit'
+                                            variant='outlined'
+                                            color='primary'
+                                            align='right'
+                                            sx={{ margin: '0 0.25rem'}}
+                                           
+                                        >
+                                            SubCategoria
                                         </Button>
                                     </Link>
                                 </td>
