@@ -15,6 +15,9 @@ import Admin from './paginas/admin/Admin';
 import FormCategoria from './paginas/admin/components/FormCategoria';
 import CatAdmin from './paginas/admin/CatAdmin';
 import FormSubCategoria from './paginas/admin/components/FormSubCategoria';
+import NavAdmin from './paginas/admin/components/NavAdmin';
+import PostAdmin from './paginas/admin/PostAdmin';
+import FormPost from './paginas/admin/components/FormPost';
 
 
 const router = createBrowserRouter([
@@ -50,26 +53,47 @@ const router = createBrowserRouter([
       {
         path: "/categoria/:id/:subcategoria",
         element: <Categoria />
-      }, {
+      },
+      {
         path: "/admin",
-        element: <Admin />
-      },
-      {
-        path: "/admin/NovaCategoria",
-        element: <FormCategoria />
-      },
-      {
-        path: "/admin/:id",
-        element: <FormCategoria />
-      },
-      {
-        path: "/Admin/categoria/:id",
-        element: <CatAdmin />
-      },
-      {
-        path: "/admin/sub/:id",
-        element: <FormSubCategoria />
+        element: <NavAdmin />,
+        children: [
+          {
+            path: "/admin",
+            element: <Admin />
+          },
+          {
+            path: "/admin/NovaCategoria",
+            element: <FormCategoria />
+          },
+          {
+            path: "/admin/:id",
+            element: <FormCategoria />
+          },
+          {
+            path: "/admin/categoria/:id",
+            element: <CatAdmin />
+          },
+          {
+            path: "/admin/sub/:id",
+            element: <FormSubCategoria />
+          },
+          {
+            path: "/admin/posts/",
+            element: <PostAdmin />
+          },
+          {
+            path: "/admin/posts/NovoPost",
+            element: <FormPost />
+          },
+          {
+            path: "/admin/posts/:id",
+            element: <FormPost />
+          }
+        ]
       }
+
+
     ]
   }
 ])

@@ -5,9 +5,9 @@ const Admin = () => {
     return (
         <main>
 
-            <div className='container'>
+            {/* <div className='container'>
                 <h2 className="titulo-pagina">Administração</h2>
-            </div>
+            </div> */}
             <ListaCatAdmin />
         </main>
     )

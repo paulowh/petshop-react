@@ -15,14 +15,6 @@
         "treinamento",
         "educacao"
       ]
-    },
-    {
-      "id": "teste testando",
-      "nome": "testando",
-      "subcategorias": [
-        "teste1",
-        "teste2"
-      ]
     }
   ],
   "posts": [
@@ -89,6 +81,13 @@
       "body": "A dieta deve contar com a ingestão de ração, frutas e vegetais como cenouras, maças e mamão, além de feijão verde e espinafre. Outro complemento essencial para a manutenção da proteína é a ingestão de tenébrios vivos ou desidratados. O normal é que um animal jovem coma mais carne, mas passe a preferir frutas e legumes quando for ficando idoso. A alimentação deve ser composta por aproximadamente 80% a 90% de legumes e flores e somente 10% a 20% de frutas.",
       "categoria": "bem-estar",
       "subcategoria": "saude"
+    },
+    {
+      "title": "novo",
+      "metadescription": "teste",
+      "body": "aaaaaaaaaaaaaaaaaaaaaaaaa",
+      "categoria": "bem-estar",
+      "id": 9
     }
   ]
 }
